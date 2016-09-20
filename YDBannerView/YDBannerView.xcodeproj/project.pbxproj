@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4AA3799B9EAD4B7E60D2C118 /* libPods-YDBannerView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A72C14B87D6F54DE7F0D1E93 /* libPods-YDBannerView.a */; };
 		643699718B0ED3AFD2EB7A08 /* libPods-YDBannerViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B46C9D7785B9F312E9452A /* libPods-YDBannerViewTests.a */; };
+		701A40831D90DB0900230C19 /* YDBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 701A40821D90DB0900230C19 /* YDBannerView.m */; };
 		70937E5F1D6432F1006F8F99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70937E5E1D6432F1006F8F99 /* main.m */; };
 		70937E621D6432F1006F8F99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70937E611D6432F1006F8F99 /* AppDelegate.m */; };
 		70937E651D6432F1006F8F99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70937E641D6432F1006F8F99 /* ViewController.m */; };
@@ -17,7 +18,6 @@
 		70937E6D1D6432F1006F8F99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70937E6B1D6432F1006F8F99 /* LaunchScreen.storyboard */; };
 		70937E781D6432F1006F8F99 /* YDBannerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70937E771D6432F1006F8F99 /* YDBannerViewTests.m */; };
 		70937E831D6432F1006F8F99 /* YDBannerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70937E821D6432F1006F8F99 /* YDBannerViewUITests.m */; };
-		70937E961D6435D4006F8F99 /* YDBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70937E951D6435D4006F8F99 /* YDBannerView.m */; };
 		70937E991D6436C4006F8F99 /* YDBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70937E981D6436C4006F8F99 /* YDBannerCell.m */; };
 		EEAF5BF8C1B3CFEB73DF2B18 /* libPods-YDBannerViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05EE97928E10A97D5FA2B109 /* libPods-YDBannerViewUITests.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +45,7 @@
 		24D8A6289A3D0F75191973D2 /* Pods-YDBannerViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDBannerViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDBannerViewUITests/Pods-YDBannerViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		32ACF890696AF33CFD2CF098 /* Pods-YDBannerViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDBannerViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YDBannerViewUITests/Pods-YDBannerViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3CD4930C1B57CE702A781CCB /* Pods-YDBannerViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDBannerViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDBannerViewTests/Pods-YDBannerViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		701A40821D90DB0900230C19 /* YDBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBannerView.m; sourceTree = "<group>"; };
 		70937E5A1D6432F1006F8F99 /* YDBannerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDBannerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70937E5E1D6432F1006F8F99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70937E601D6432F1006F8F99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		70937E821D6432F1006F8F99 /* YDBannerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDBannerViewUITests.m; sourceTree = "<group>"; };
 		70937E841D6432F1006F8F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70937E941D6435D4006F8F99 /* YDBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBannerView.h; sourceTree = "<group>"; };
-		70937E951D6435D4006F8F99 /* YDBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBannerView.m; sourceTree = "<group>"; };
 		70937E971D6436C4006F8F99 /* YDBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBannerCell.h; sourceTree = "<group>"; };
 		70937E981D6436C4006F8F99 /* YDBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBannerCell.m; sourceTree = "<group>"; };
 		86DA627B5B8E1394303CEE73 /* Pods-YDBannerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDBannerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDBannerView/Pods-YDBannerView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				70937E941D6435D4006F8F99 /* YDBannerView.h */,
-				70937E951D6435D4006F8F99 /* YDBannerView.m */,
+				701A40821D90DB0900230C19 /* YDBannerView.m */,
 				70937E971D6436C4006F8F99 /* YDBannerCell.h */,
 				70937E981D6436C4006F8F99 /* YDBannerCell.m */,
 			);
@@ -462,8 +462,8 @@
 				70937E651D6432F1006F8F99 /* ViewController.m in Sources */,
 				70937E621D6432F1006F8F99 /* AppDelegate.m in Sources */,
 				70937E5F1D6432F1006F8F99 /* main.m in Sources */,
+				701A40831D90DB0900230C19 /* YDBannerView.m in Sources */,
 				70937E991D6436C4006F8F99 /* YDBannerCell.m in Sources */,
-				70937E961D6435D4006F8F99 /* YDBannerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

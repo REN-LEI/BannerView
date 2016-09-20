@@ -33,6 +33,7 @@ UICollectionViewDataSource
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     [self setUpBannerView];
 }
 
@@ -106,15 +107,16 @@ UICollectionViewDataSource
 - (void)automaticScroll:(NSTimer *)timer {
     
     NSArray <NSIndexPath *>*indexPathsForVisibleItems = [self.mCollectionView indexPathsForVisibleItems];
-    if (indexPathsForVisibleItems.count == 1) {
-        NSIndexPath *indexPath = indexPathsForVisibleItems.firstObject;
+    
+    if (indexPathsForVisibleItems.count) {
+        NSIndexPath *indexPath = indexPathsForVisibleItems.lastObject;
         self.currentPage = indexPath.item;
     }
-    
     if (timer) {
         self.currentPage++;
         [self.mCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_currentPage inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     }
+
     self.pageControl.currentPage = self.currentPage % _imageUrls.count;
 }
 
@@ -127,7 +129,7 @@ UICollectionViewDataSource
         _totalNumber = imageUrls.count;
     }
     else {
-        _totalNumber = imageUrls.count *1000;
+        _totalNumber = imageUrls.count *100;
         [self setUpTimer];
         _pageControl.numberOfPages = self.imageUrls.count;
     }
@@ -154,11 +156,15 @@ UICollectionViewDataSource
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     CGFloat w = CGRectGetWidth(self.mCollectionView.frame);
+    
     if (scrollView.contentOffset.x >= w *_totalNumber - (_imageUrls.count *w) ||
         scrollView.contentOffset.x <= _imageUrls.count *w)
     {
         [self.mCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_totalNumber*0.5 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     }
+}
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self automaticScroll:nil];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -166,7 +172,6 @@ UICollectionViewDataSource
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self automaticScroll:nil];
     [self resumeTimer];
 }
 
